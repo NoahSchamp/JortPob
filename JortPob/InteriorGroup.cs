@@ -49,7 +49,11 @@ namespace JortPob
 
         public Paramanager.WeatherData GetWeather()
         {
-            return Paramanager.INTERIOR_WEATHER_DATA_LIST[1];  // @TODO: actually figure out what kind of cell this is and grab correct weather
+            foreach (WeatherData location in Paramanager.INTERIOR_WEATHER_DATA_LIST)
+            {
+                if (map.ToString() == location.ToString().Substring(0,2)) { return Paramanager.INTERIOR_WEATHER_DATA_LIST[location]; }
+            }
+            return Paramanager.INTERIOR_WEATHER_DATA_LIST[1];  // @TODO: error case
         }
 
         // Fugly code <3

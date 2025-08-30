@@ -240,8 +240,8 @@ namespace JortPob
                     row.Cells[1 + (offset * 3)].SetValue(-1);
 
                     /* Quick optimization */
-                    /* In Morrowind they comibne multiple effects for some emitter things. Most notably a campfire is like 5 emitters */
-                    /* In Elden Ring they jus thave a single simple campfire FXR. So uhhh let's just look and see if a MW emitter has the fire part and then delete the rest to make things easier. */
+                    /* In Morrowind they combine multiple effects for some emitter things. Most notably a campfire is like 5 emitters */
+                    /* In Elden Ring they just have a single simple campfire FXR. So uhhh let's just look and see if a MW emitter has the fire part and then delete the rest to make things easier. */
                     if (asset.model.dummies.ContainsKey("superspray01 emitter"))
                     {
                         asset.model.dummies.Remove("smoke emitter");
@@ -367,7 +367,7 @@ namespace JortPob
             }
         }
 
-        // @TODO: maybe move weatherdata to layout or its own class since its used by multiple toher thingsthingso
+        // @TODO: maybe move weatherdata to layout or its own class since its used by multiple other things
 
         public static List<WeatherData> EXTERIOR_WEATHER_DATA_LIST = new()
         {
