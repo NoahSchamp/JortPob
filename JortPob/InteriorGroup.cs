@@ -42,10 +42,12 @@ namespace JortPob
 
         public Paramanager.WeatherData GetWeather()
         {
+            /*
             foreach (WeatherData location in Paramanager.INTERIOR_WEATHER_DATA_LIST)
             {
                 if (map.ToString() == location.ToString().Substring(0,2)) { return Paramanager.INTERIOR_WEATHER_DATA_LIST[location]; }
             }
+            */
             return Paramanager.INTERIOR_WEATHER_DATA_LIST[1];  // @TODO: error case
         }
 
